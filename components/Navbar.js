@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
-import { FaBars } from "react-icons/fa";
+import NavbarLinks from "./NavbarLinks";
 
 const MarginB = styled.div`
   padding-bottom: 70px;
@@ -17,8 +17,28 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--dark);
-  background: var(--light);
+  color: var(--light);
+  background: rgba(0, 0, 0, 0.7);
+`;
+
+const NavMobile = styled.nav`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  ${
+    "" /* a:not(:last-of-type) {
+    border-right: solid 1px var(--light);
+  } */
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  } ;
 `;
 
 const NavMenu = styled.div`
@@ -27,7 +47,7 @@ const NavMenu = styled.div`
     padding: 5px 2em;
   }
   a:not(:last-of-type) {
-    border-right: solid 1px black;
+    border-right: solid 1px var(--light);
   }
   .active {
     font-weight: bold;
@@ -55,17 +75,6 @@ const StyledBtn = styled.button`
     box-shadow: var(--light) 4px 4px 0 0, var(--dark) 4px 4px 0 1px;
   }
 `;
-
-export const Bars = styled(FaBars)`
-  display: none;
-  color: var(--dark);
-  @media screen and (max-width: 768px) {
-    display: flex;
-    font-size: 1.8rem;
-    margin-right: 5vw;
-    cursor: pointer;
-  }
-`;
 const click = () => {
   console.log("click");
 };
@@ -80,21 +89,13 @@ const Navbar = () => {
           </a>
         </Link>
         <NavMenu>
-          <ActiveLink activeClassName="active" href="/">
-            <a>Home</a>
-          </ActiveLink>
-          <ActiveLink activeClassName="active" href="/roadmap">
-            <a>Roadmap</a>
-          </ActiveLink>
-          <ActiveLink activeClassName="active" href="/whitepaper">
-            <a>Whitepaper</a>
-          </ActiveLink>
-          <ActiveLink activeClassName="active" href="/about">
-            <a>About</a>
-          </ActiveLink>
+          <NavbarLinks />
         </NavMenu>
-        <StyledBtn onClick={click}>Go To App</StyledBtn>
-        <Bars />
+        <NavMobile>
+          <NavbarLinks />
+        </NavMobile>
+
+        <StyledBtn onClick={click}>Go To dApp</StyledBtn>
       </StyledNav>
     </MarginB>
   );
