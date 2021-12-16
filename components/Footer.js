@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   left: 0;
   right: 0;
   text-align: center;
-  color: var(--light);
+  color: rgba(238, 238, 228, 0.3);
   background: inherit;
   height: 20px;
 `;

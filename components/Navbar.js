@@ -23,10 +23,10 @@ const StyledNav = styled.nav`
 
 const NavMobile = styled.nav`
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 30px;
   display: none;
   background: rgba(0, 0, 0, 0.7);
   ${
@@ -94,7 +94,6 @@ const Navbar = () => {
         <NavMobile>
           <NavbarLinks />
         </NavMobile>
-
         <StyledBtn onClick={click}>Go To dApp</StyledBtn>
       </StyledNav>
     </MarginB>
