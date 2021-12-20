@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
+  background: inherit;
   bottom: 0;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
   left: 0;
   right: 0;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color: rgba(238, 238, 228, 0.3);
-  background: inherit;
+  color: rgba(238, 238, 228, 0.4);
   height: 20px;
 `;
 

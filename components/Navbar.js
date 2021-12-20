@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
 import NavbarLinks from "./NavbarLinks";
 
@@ -18,7 +17,9 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   color: var(--light);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: solid 1px var(--light);
+  z-index: 100;
 `;
 
 const NavMobile = styled.nav`
@@ -29,11 +30,7 @@ const NavMobile = styled.nav`
   height: 30px;
   display: none;
   background: rgba(0, 0, 0, 0.7);
-  ${
-    "" /* a:not(:last-of-type) {
-    border-right: solid 1px var(--light);
-  } */
-  }
+  border-top: solid 1px var(--light);
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: space-evenly;
@@ -59,13 +56,14 @@ const NavMenu = styled.div`
 `;
 
 const StyledBtn = styled.button`
-  margin-right: 5vw;
+  margin-right: 7vw;
   padding: 0.5em 1.3em;
   background: none;
   border: solid 1px black;
   box-shadow: var(--dark) 4px 4px 0 0, var(--light) 4px 4px 0 1px;
-  border-radius: 1px;
-  font-weight: 500;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 16px;
   background: var(--light);
   color: var(--dark);
   :hover {
@@ -94,7 +92,7 @@ const Navbar = () => {
         <NavMobile>
           <NavbarLinks />
         </NavMobile>
-        <StyledBtn onClick={click}>Go To dApp</StyledBtn>
+        <StyledBtn onClick={click}>App</StyledBtn>
       </StyledNav>
     </MarginB>
   );

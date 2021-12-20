@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const StyledLogo = styled.div`
-  ${"" /* margin-right: auto; */}
-  margin-left: 5vw;
-  ${"" /* margin-top: auto;s */}
+  margin-left: 7vw;
+  h1 {
+    font-weight: 700;
+    font-size: 26px;
+  }
 `;
 
 const Logo = () => {

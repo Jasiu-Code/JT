@@ -39,12 +39,11 @@ const Roadmap = () => {
           <h1>Roadmap</h1>
           <StyledYear>2021</StyledYear>
           <ul>
-            <Done>Project plannings</Done>
-            <li>Building Team</li>
-            <li>Website Launch</li>
-            <li>Website Launch</li>
-            <li>Website Launch</li>
-            <li>Whitepaper Release</li>
+            <Done>Setting up project</Done>
+            <Done>Website Launch</Done>
+            <Done>Build test smart contract</Done>
+            <Done>Build MVP </Done>
+            <li> s</li>
             <li>Testnet V1.0 Launch</li>
             <li> Vc</li>
             <li>private inwestors</li>
@@ -52,12 +51,17 @@ const Roadmap = () => {
           </ul>
           <StyledYear>2022</StyledYear>
           <ul>
-            <li>Security Audit</li>
-            <li>PRoject </li>
-            <li>cos3</li>
-            <li>cos3</li>
-            <li>cos3</li>
-            <li>cos3</li>
+            <li>Start social medias </li>
+            <li> Whitepaper Release</li>
+            <li>Looking for funding</li>
+            <li>Offical testnet launch</li>
+            <li>Promotion & Marketing</li>
+            <li>Public offering</li>
+            <li>Plans for 2023</li>
+            <li>DEX listing</li>
+            <li>Smart contract audit</li>
+            <li>Mobile App</li>
+            <li>Plans for 2023</li>
           </ul>
         </Wrapper>
       </Template>
