@@ -16,10 +16,11 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--light);
-  background: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.8);
   border-bottom: solid 1px var(--light);
   z-index: 100;
+  font-size: clamp(16px, calc(8px + 1vw), 22px);
 `;
 
 const NavMobile = styled.nav`
@@ -27,14 +28,21 @@ const NavMobile = styled.nav`
   bottom: 20px;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 70px;
   display: none;
-  background: rgba(0, 0, 0, 0.7);
-  border-top: solid 1px var(--light);
+  background: rgba(0, 0, 0, 0.9);
+  border-top: solid 1px var(--white);
+  border-bottom: solid 1px var(--white);
   @media screen and (max-width: 768px) {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    a {
+      padding: 2px 10px;
+    }
+    a:not(:last-of-type) {
+      border-right: solid 1px var(--white);
+    }
   } ;
 `;
 
@@ -44,7 +52,7 @@ const NavMenu = styled.div`
     padding: 5px 2em;
   }
   a:not(:last-of-type) {
-    border-right: solid 1px var(--light);
+    border-right: solid 1px var(--white);
   }
   .active {
     font-weight: bold;
@@ -59,18 +67,19 @@ const StyledBtn = styled.button`
   margin-right: 7vw;
   padding: 0.5em 1.3em;
   background: none;
-  border: solid 1px black;
-  box-shadow: var(--dark) 4px 4px 0 0, var(--light) 4px 4px 0 1px;
+  border: solid 1px var(--black);
+  box-shadow: var(--black) 4px 4px 0 0, var(--white) 4px 4px 0 1px;
   border-radius: 3px;
   font-weight: 600;
-  font-size: 16px;
-  background: var(--light);
-  color: var(--dark);
+  font-size: clamp(16px, calc(5px + 1vw), 20px);
+  background: var(--white);
+  color: var(--black);
+  white-space: nowrap;
   :hover {
     cursor: pointer;
-    background: var(--dark);
-    color: var(--light);
-    box-shadow: var(--light) 4px 4px 0 0, var(--dark) 4px 4px 0 1px;
+    background: var(--black);
+    color: var(--white);
+    box-shadow: var(--white) 4px 4px 0 0, var(--black) 4px 4px 0 1px;
   }
 `;
 const click = () => {
@@ -92,7 +101,7 @@ const Navbar = () => {
         <NavMobile>
           <NavbarLinks />
         </NavMobile>
-        <StyledBtn onClick={click}>App</StyledBtn>
+        <StyledBtn onClick={click}>Log In</StyledBtn>
       </StyledNav>
     </MarginB>
   );

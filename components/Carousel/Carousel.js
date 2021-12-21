@@ -8,6 +8,7 @@ import {
   StyledDescription,
   StyledSubtitle,
   StyledTitle,
+  Wrapper,
 } from "./CarouselStyles";
 
 const useTilt = (active) => {
@@ -88,32 +89,35 @@ const Slide = ({ slide, offset }) => {
   );
 };
 
-const Carousel = () => {
+const Carousel = (props) => {
   const [state, dispatch] = useReducer(slidesReducer, initialState);
   return (
-    <SlidesWrapper>
-      <button
-        onClick={() => {
-          dispatch({ type: "PREV" });
-        }}
-      >
-        ‹
-      </button>
+    <Wrapper>
+      <h1>{props.title}</h1>
+      <SlidesWrapper>
+        <button
+          onClick={() => {
+            dispatch({ type: "NEXT" });
+          }}
+        >
+          ‹
+        </button>
 
-      {[...CarouselData, ...CarouselData, ...CarouselData].map(
-        (slide, index) => {
-          let offset = CarouselData.length + (state.slideIndex - index);
-          return <Slide slide={slide} offset={offset} key={index} />;
-        }
-      )}
-      <button
-        onClick={() => {
-          dispatch({ type: "NEXT" });
-        }}
-      >
-        ›
-      </button>
-    </SlidesWrapper>
+        {[...CarouselData, ...CarouselData, ...CarouselData].map(
+          (slide, index) => {
+            let offset = CarouselData.length + (state.slideIndex - index);
+            return <Slide slide={slide} offset={offset} key={index} />;
+          }
+        )}
+        <button
+          onClick={() => {
+            dispatch({ type: "PREV" });
+          }}
+        >
+          ›
+        </button>
+      </SlidesWrapper>
+    </Wrapper>
   );
 };
 

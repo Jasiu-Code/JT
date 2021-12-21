@@ -9,7 +9,8 @@ const Wrapper = styled.div`
   margin-right: auto;
   text-align: center;
   color: rgba(238, 238, 228, 0.4);
-  height: 20px;
+  min-height: 20px;
+  z-index: 2;
 `;
 
 const Footer = () => {

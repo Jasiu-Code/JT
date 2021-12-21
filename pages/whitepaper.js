@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Template from "../components/Template";
 
 const Wrapper = styled.div`
   color: var(--light);
@@ -14,11 +13,9 @@ const Whitepaper = () => {
       <Head>
         <title>S Y G | Whitepaper</title>
       </Head>
-      <Template>
-        <Wrapper>
-          <h1>Whitepaper</h1>
-        </Wrapper>
-      </Template>
+      <Wrapper>
+        <h1>Whitepaper</h1>
+      </Wrapper>
     </>
   );
 };

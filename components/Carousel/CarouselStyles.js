@@ -1,25 +1,35 @@
 import styled from "styled-components";
 
-export const SlidesWrapper = styled.div`
+export const Wrapper = styled.div`
+  color: var(--white);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: auto;
+  h1 {
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+`;
 
+export const SlidesWrapper = styled.div`
   position: relative;
   display: grid;
   overflow:hidden;
-    align-items: center;
+  align-items: center;
   justify-content: center;
-  background-image: url("carbon_fibre.png");
-
-
+  width:90vw;
   button {
     appearance: none;
-    background: transparent; 
+    background:transparent;
     border: none;
-    color: white;
+    color: var(--white);
     position: absolute;
-    font-size: 5rem;
-    width: 5rem;
-    height: 5rem;
-    top: 30%;
+    font-size: 15rem;
+    width: 40%;
+    height: 100%;
     transition: opacity 0.3s;
     opacity: 0.7;
     z-index: 5;
@@ -39,6 +49,7 @@ export const SlidesWrapper = styled.div`
 
 export const SlideWrap = styled.div`
   grid-area: 1/-1;
+  border: solid 2px black;
   display: grid;
   align-items: center;
   transition: transform 0.5s ease-in-out;

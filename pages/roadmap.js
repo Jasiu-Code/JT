@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Template from "../components/Template";
 const Wrapper = styled.div`
   color: var(--light);
   display: flex;
@@ -34,37 +33,35 @@ const Roadmap = () => {
       <Head>
         <title>S Y G | Roadmap</title>
       </Head>
-      <Template>
-        <Wrapper>
-          <h1>Roadmap</h1>
-          <StyledYear>2021</StyledYear>
-          <ul>
-            <Done>Setting up project</Done>
-            <Done>Website Launch</Done>
-            <Done>Build test smart contract</Done>
-            <Done>Build MVP </Done>
-            <li> s</li>
-            <li>Testnet V1.0 Launch</li>
-            <li> Vc</li>
-            <li>private inwestors</li>
-            <li>Testnet V2.0 Launch</li>
-          </ul>
-          <StyledYear>2022</StyledYear>
-          <ul>
-            <li>Start social medias </li>
-            <li> Whitepaper Release</li>
-            <li>Looking for funding</li>
-            <li>Offical testnet launch</li>
-            <li>Promotion & Marketing</li>
-            <li>Public offering</li>
-            <li>Plans for 2023</li>
-            <li>DEX listing</li>
-            <li>Smart contract audit</li>
-            <li>Mobile App</li>
-            <li>Plans for 2023</li>
-          </ul>
-        </Wrapper>
-      </Template>
+      <Wrapper>
+        <h1>Roadmap</h1>
+        <StyledYear>2021</StyledYear>
+        <ul>
+          <Done>Setting up project</Done>
+          <Done>Website Launch</Done>
+          <Done>Build test smart contract</Done>
+          <Done>Build MVP </Done>
+          <li> s</li>
+          <li>Testnet V1.0 Launch</li>
+          <li> Vc</li>
+          <li>private inwestors</li>
+          <li>Testnet V2.0 Launch</li>
+        </ul>
+        <StyledYear>2022</StyledYear>
+        <ul>
+          <li>Start social medias </li>
+          <li> Whitepaper Release</li>
+          <li>Looking for funding</li>
+          <li>Offical testnet launch</li>
+          <li>Promotion & Marketing</li>
+          <li>Public offering</li>
+          <li>Plans for 2023</li>
+          <li>DEX listing</li>
+          <li>Smart contract audit</li>
+          <li>Mobile App</li>
+          <li>Plans for 2023</li>
+        </ul>
+      </Wrapper>
     </>
   );
 };

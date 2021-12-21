@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from ".//Navbar/Navbar";
 import Footer from "./Footer";
 import styled from "styled-components";
 
@@ -9,8 +9,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ${"" /* background-image: url("/1.jpeg"); */}
-  background:black;
 `;
 
 const Layout = ({ children }) => {
