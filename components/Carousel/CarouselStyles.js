@@ -7,7 +7,9 @@ export const SlidesWrapper = styled.div`
   overflow:hidden;
     align-items: center;
   justify-content: center;
-  max-width:960px;
+  background-image: url("carbon_fibre.png");
+
+
   button {
     appearance: none;
     background: transparent; 

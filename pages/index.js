@@ -25,7 +25,14 @@ export default function Home() {
           </h2>
           <h2>NFT & Tokens</h2>
         </Wrapper>
+        <h1>KARUZELA !</h1>
         <Carousel />
+        {/* <h1>KARUZELA !</h1>
+        <Carousel />
+        <h1>KARUZELA !</h1>
+        <Carousel />
+        <h1>KARUZELA !</h1>
+        <Carousel /> */}
       </Template>
     </>
   );

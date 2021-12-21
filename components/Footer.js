@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   position: fixed;
-  background: inherit;
   bottom: 0;
   left: 0;
   right: 0;
