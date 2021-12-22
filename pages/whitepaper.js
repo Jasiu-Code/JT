@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   color: var(--black);
   height: 90vh;
-  width: 960px;
+  max-width: 960px;
   z-index: 1;
   background: var(--white);
   display: flex;
