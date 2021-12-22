@@ -9,6 +9,14 @@ const Wrapper = styled.div`
   margin-top: 10vh;
   color: white;
   z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+`;
+
+const CaruWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `;
 export default function Home() {
   return (
@@ -27,7 +35,10 @@ export default function Home() {
         <h2>NFT & Tokens</h2>
       </Wrapper>
       <h1>KARUZELA !</h1>
-      <Carousel title="Trending" />
+      <CaruWrapper>
+        <Carousel title="Example projects" />
+        <Carousel title="Example projects" />
+      </CaruWrapper>
     </>
   );
 }

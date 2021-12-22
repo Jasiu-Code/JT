@@ -67,7 +67,7 @@ const slidesReducer = (state, event) => {
   }
 };
 
-const Slide = ({ slide, offset }) => {
+const Slide = ({ slide, offset, index }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
   return (
@@ -80,19 +80,36 @@ const Slide = ({ slide, offset }) => {
       }}
     >
       <Content active={active}>
-        <StyledTitle>{slide.title}</StyledTitle>
-        <StyledSubtitle>{slide.subtitle}</StyledSubtitle>
-        <StyledDescription>{slide.description}</StyledDescription>
+        <StyledTitle>
+          <p>{slide.title}</p>
+        </StyledTitle>
+        <StyledSubtitle>
+          <p>{slide.subtitle}</p>
+        </StyledSubtitle>
+        <StyledDescription>
+          <p>{slide.description}</p>
+        </StyledDescription>
       </Content>
-      <Image height="350px" width="250px" src={slide.image} alt="." />
+      <Image height="400px" width="300px" src={slide.image} alt="." />
     </SlideWrap>
   );
 };
 
+const KeyDown = () => {};
+
 const Carousel = (props) => {
   const [state, dispatch] = useReducer(slidesReducer, initialState);
   return (
-    <Wrapper>
+    <Wrapper
+      onKeyDown={(event) => {
+        if (event.key == "ArrowLeft") {
+          dispatch({ type: "NEXT" });
+        }
+        if (event.key == "ArrowRight") {
+          dispatch({ type: "PREV" });
+        }
+      }}
+    >
       <h1>{props.title}</h1>
       <SlidesWrapper>
         <button
