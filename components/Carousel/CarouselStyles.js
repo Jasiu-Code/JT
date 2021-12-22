@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   margin: 1rem;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
-  box-shadow: inset 0 0 0.6rem var(--bgl), 0 0 1rem var(--bgl);
+  box-shadow: inset 0 0 0.2rem var(--bgl), 0 0 0.2rem var(--bgl);
   h1 {
     margin: 10px;
     background: rgba(0, 0, 0, 0.1);
@@ -55,8 +55,7 @@ export const SlidesWrapper = styled.div`
 export const SlideWrap = styled.div`
   grid-area: 1/-1;
   border: solid 1px var(--bgl);
-
-  box-shadow: 0 0 1.2rem var(--bgl);
+  box-shadow: 0 0 0.6rem var(--bgl);
   display: grid;
   align-items: center;
   transition: transform 0.4s ease-in-out;
@@ -90,7 +89,7 @@ export const Content = styled.div`
   opacity: 0.5;
   opacity: ${(props) => (props.active ? 1 : 0)};
   p {
-    background: rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 1px black, 4px 4px 5px black;
   }
 `;
 export const StyledTitle = styled.div`

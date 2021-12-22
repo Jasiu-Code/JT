@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useReducer, useRef } from "react";
-import { CarouselData } from "./CarouselData";
 import {
   Content,
   SlidesWrapper,
@@ -52,17 +51,17 @@ const initialState = {
 const slidesReducer = (state, event) => {
   if (event.type === "NEXT") {
     console.log("next");
+
     return {
       ...state,
-      slideIndex: (state.slideIndex + 1) % CarouselData.length,
+      slideIndex: state.slideIndex === -7 ? 0 : state.slideIndex - 1,
     };
   }
   if (event.type === "PREV") {
     console.log("prev");
     return {
       ...state,
-      slideIndex:
-        state.slideIndex === 0 ? CarouselData.length - 1 : state.slideIndex - 1,
+      slideIndex: (state.slideIndex + 1) % 8,
     };
   }
 };
@@ -95,40 +94,36 @@ const Slide = ({ slide, offset, index }) => {
   );
 };
 
-const KeyDown = () => {};
-
-const Carousel = (props) => {
+const Carousel = ({ title, data }) => {
   const [state, dispatch] = useReducer(slidesReducer, initialState);
+  console.log({ data });
   return (
     <Wrapper
       onKeyDown={(event) => {
         if (event.key == "ArrowLeft") {
-          dispatch({ type: "NEXT" });
+          dispatch({ type: "PREV" });
         }
         if (event.key == "ArrowRight") {
-          dispatch({ type: "PREV" });
+          dispatch({ type: "NEXT" });
         }
       }}
     >
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
       <SlidesWrapper>
         <button
           onClick={() => {
-            dispatch({ type: "NEXT" });
+            dispatch({ type: "PREV" });
           }}
         >
           ‹
         </button>
-
-        {[...CarouselData, ...CarouselData, ...CarouselData].map(
-          (slide, index) => {
-            let offset = CarouselData.length + (state.slideIndex - index);
-            return <Slide slide={slide} offset={offset} key={index} />;
-          }
-        )}
+        {[...data, ...data, ...data].map((slide, index) => {
+          let offset = data.length + (state.slideIndex - index);
+          return <Slide slide={slide} offset={offset} key={index} />;
+        })}
         <button
           onClick={() => {
-            dispatch({ type: "PREV" });
+            dispatch({ type: "NEXT" });
           }}
         >
           ›

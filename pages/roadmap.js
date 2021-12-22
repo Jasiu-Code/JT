@@ -6,8 +6,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
   ul {
     list-style: none;
+  }
+  li {
+    padding: 0.6rem 0;
   }
 `;
 

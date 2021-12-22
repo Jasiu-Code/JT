@@ -2,43 +2,52 @@ import Head from "next/head";
 import styled from "styled-components";
 import Carousel from "../components/Carousel/Carousel";
 import { CarouselData } from "../components/Carousel/CarouselData";
+import { CarouselData2 } from "../components/Carousel/CarouselData2";
 
 const Wrapper = styled.div`
-  color: var(--white);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin-top: 10vh;
+  justify-content: space-evenly;
+  padding: 2rem;
+  z-index: 5;
+`;
+
+const ContentWrapper = styled.div`
+  color: var(--white);
   color: white;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
+  font-size: clamp(20px, 50px, 1.3vw);
 `;
 
 const CaruWrapper = styled.div`
-  display: flex;
+  ${"" /* display: flex; */}
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `;
 export default function Home() {
   return (
-    <>
+    <Wrapper>
       <Head>
         <title>S Y G | Home</title>
       </Head>
-      <Wrapper>
+      <ContentWrapper>
         <h1>Keep it simple</h1>
         <h1>Keep it decentralized</h1>
 
         <h2>
-          Fully decentralized crowdfunding platform where all investors gets
-          benefits
+          Fully decentralized crowdfunding platform
+          <br /> where all investors gets benefits
         </h2>
         <h2>NFT & Tokens</h2>
-      </Wrapper>
-      <h1>KARUZELA !</h1>
+      </ContentWrapper>
       <CaruWrapper>
-        <Carousel title="Example projects" />
-        <Carousel title="Example projects" />
+        <Carousel title="Example projects" data={CarouselData} />
+        {/* <Carousel title="Example projects2" data={CarouselData2} /> */}
       </CaruWrapper>
-    </>
+    </Wrapper>
   );
 }

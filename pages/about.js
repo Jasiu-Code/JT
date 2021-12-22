@@ -2,6 +2,7 @@ import Head from "next/head";
 import styled from "styled-components";
 const Wrapper = styled.div`
   color: var(--light);
+  z-index: 1;
 `;
 const About = () => {
   return (

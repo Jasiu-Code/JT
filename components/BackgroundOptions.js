@@ -46,7 +46,7 @@ export const options = {
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 1,
+      speed: 0.7,
       straight: false,
     },
     number: {
