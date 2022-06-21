@@ -10,13 +10,13 @@ export const MainWrapper = styled.div`
   scroll-snap-type: y mandatory;
   text-align: center;
   z-index: 5;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   @keyframes page-load {
     0% {
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
     100% {
-      transform: translateX(0%);
+      transform: translateY(0%);
     }
   }
   @media screen and (max-width: 768px) {
