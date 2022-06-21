@@ -1,18 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   color: var(--white);
-  z-index: 1;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
-  background: rgba(0, 0, 0, 0.8);
+  ${'' /* background: rgba(0, 0, 0, 0.8); */}
   border-radius: 1rem;
-  box-shadow: inset 0 0 0.2rem var(--bgl), 0 0 0.2rem var(--bgl);
-  h1 {
+  ${'' /* box-shadow: inset 0 0 0.2rem var(--bgl), 0 0 0.2rem var(--bgl); */}
+  ${
+    '' /* h1 {
     margin: 10px;
     background: rgba(0, 0, 0, 0.1);
+  } */
   }
 `;
 
@@ -54,8 +56,8 @@ export const SlidesWrapper = styled.div`
 
 export const SlideWrap = styled.div`
   grid-area: 1/-1;
-  border: solid 1px var(--bgl);
-  box-shadow: 0 0 0.6rem var(--bgl);
+  border: solid 2px var(--orange);
+  box-shadow: 0 0 0.6rem var(--orange);
   display: grid;
   align-items: center;
   transition: transform 0.4s ease-in-out;
@@ -67,29 +69,25 @@ export const SlideWrap = styled.div`
   rotateY(calc(30deg * var(--offset))); 
     --x: calc(var(--px) - 0.5);
     --y: calc(var(--py) - 0.5);
-    
    &:hover{
-    transition: ${(props) => (props.active ? "none" : "")};
+    transition: ${(props) => (props.active ? 'none' : '')};
     transform: ${(props) =>
       props.active
-        ? "rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg))"
-        : ""}
-    }}}
-}
-
-
+        ? 'rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg))'
+        : ''}
+    }}
 `;
 
 export const Content = styled.div`
   position: absolute;
-  color: white;
+  color: var(--white);
   transform-style: preserve-3d;
   transform: translateZ(2rem);
   transition: opacity 0.3s linear;
-  opacity: 0.5;
+
   opacity: ${(props) => (props.active ? 1 : 0)};
   p {
-    text-shadow: 2px 2px 1px black, 4px 4px 5px black;
+    text-shadow: 1px 1px 1px black, 4px 4px 5px black;
   }
 `;
 export const StyledTitle = styled.div`
@@ -97,20 +95,16 @@ export const StyledTitle = styled.div`
   font-weight: normal;
   letter-spacing: 0.2ch;
   text-transform: uppercase;
-  margin: 0;
+  margin: 1rem;
   display: flex;
+  font-weight: bold;
 `;
-export const StyledSubtitle = styled.div`
-  font-size: 1.2rem;
-  font-weight: normal;
-  letter-spacing: 0.2ch;
-  text-transform: uppercase;
-  margin: 0;
-  display: flex;
-`;
+
 export const StyledDescription = styled.div`
-  margin: 0;
-  font-size: 0.8rem;
+  margin: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.2ch;
   display: flex;
+  font-weight: bold;
+  text-align: left;
 `;

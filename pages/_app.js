@@ -1,27 +1,17 @@
-import Particles from "react-tsparticles";
-import { options } from "../components/BackgroundOptions";
-import Layout from "../components/Layout";
-import "../styles/globals.css";
+import Layout from './Layout';
+import '../styles/globals.css';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { options } from '../particleJS.config';
 
 function MyApp({ Component, pageProps }) {
-  const particlesInit = (main) => {
-    console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
-
-  const particlesLoaded = (container) => {
-    console.log(container);
+  const particlesInit = async (main) => {
+    await loadFull(main);
   };
   return (
     <>
       <Layout>
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={options}
-        />
+        <Particles id='tsparticles' init={particlesInit} options={options} />
         <Component {...pageProps} />
       </Layout>
     </>

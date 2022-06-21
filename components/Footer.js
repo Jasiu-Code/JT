@@ -1,20 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+const FooterWrapper = styled.footer`
+  background: var(--black);
+  color: var(--white);
   text-align: center;
-  color: rgba(238, 238, 228, 0.4);
-  min-height: 20px;
-  z-index: 2;
+  height: 25px;
+  opacity: 0.6;
+  z-index: 5;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 70px;
+  }
 `;
 
 const Footer = () => {
-  return <Wrapper>Copryright 2021 Share Your Gains</Wrapper>;
+  return (
+    <FooterWrapper>
+      Copryright {new Date().getFullYear()} Just Time
+    </FooterWrapper>
+  );
 };
 
 export default Footer;

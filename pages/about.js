@@ -1,19 +1,19 @@
-import Head from "next/head";
-import styled from "styled-components";
-const Wrapper = styled.div`
-  color: var(--light);
-  z-index: 1;
-`;
+import Head from 'next/head';
+
+import { MainWrapper, AboutWrapper, StyledTitle } from '../components/Styles';
+
 const About = () => {
   return (
     <>
       <Head>
-        <title>S Y G | About</title>
+        <title>Just Time | About</title>
       </Head>
 
-      <Wrapper>
-        <h1>About</h1>
-      </Wrapper>
+      <MainWrapper>
+        <AboutWrapper>
+          <StyledTitle>About</StyledTitle>
+        </AboutWrapper>
+      </MainWrapper>
     </>
   );
 };
