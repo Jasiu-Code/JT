@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Base = styled.div`
   position: relative;
@@ -75,7 +76,7 @@ const Second = styled(Hand)`
   border-radius: 50% 50% 0% 0%;
   background: var(--orange);
 `;
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   position: relative;
   opacity: 1;
   @media screen and (max-width: 768px) {
@@ -98,7 +99,17 @@ const Clock = () => {
   }, [second]);
 
   return (
-    <Wrapper>
+    <Wrapper
+      drag
+      dragConstraints={{
+        top: -300,
+        left: -300,
+        right: 300,
+        bottom: 300,
+      }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
       <Base>
         <Second
           style={{ transform: `rotate(${second * 6}deg) translate(-50%)` }}

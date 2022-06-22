@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import { MainWrapper, AboutWrapper, StyledTitle } from '../components/Styles';
 
 const About = () => {
@@ -8,7 +7,6 @@ const About = () => {
       <Head>
         <title>Just Time | About</title>
       </Head>
-
       <MainWrapper>
         <AboutWrapper>
           <StyledTitle>About</StyledTitle>

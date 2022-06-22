@@ -12,7 +12,7 @@ export const options = {
       },
     },
     color: {
-      value: '#f25b04',
+      value: '#5c5b59',
     },
     shape: {
       type: 'char',

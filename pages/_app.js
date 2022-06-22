@@ -3,8 +3,11 @@ import '../styles/globals.css';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { options } from '../particleJS.config';
+import { AnimatePresence } from 'framer-motion';
+import { Router } from 'next/router';
+import { MotionDiv } from '../components/Styles';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -12,7 +15,16 @@ function MyApp({ Component, pageProps }) {
     <>
       <Layout>
         <Particles id='tsparticles' init={particlesInit} options={options} />
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <MotionDiv
+            key={router.route}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <Component {...pageProps} key={router.route} />
+          </MotionDiv>
+        </AnimatePresence>
       </Layout>
     </>
   );

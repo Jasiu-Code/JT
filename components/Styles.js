@@ -1,8 +1,18 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+export const MotionDiv = styled(motion.div)`
+  z-index: 3;
+`;
 
 export const MainWrapper = styled.div`
-  animation: page-load 0.3s ease-in;
-  animation-fill-mode: forwards;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  ${'' /* animation: page-load 0.3s ease-in; */}
+  ${'' /* animation-fill-mode: forwards; */}
   height: calc(100vh - 70px);
   margin-top: 70px;
   overflow-y: scroll;
@@ -10,15 +20,15 @@ export const MainWrapper = styled.div`
   scroll-snap-type: y mandatory;
   text-align: center;
   z-index: 5;
-  transform: translateY(-100%);
-  @keyframes page-load {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
+  ${'' /* transform: translateY(-100%); */}
+  ${'' /* @keyframes page-load { */}
+    ${'' /* 0% { */}
+      ${'' /* transform: translateY(-100%); */}
+    ${'' /* } */}
+    ${'' /* 100% { */}
+      ${'' /* transform: translateY(0%); */}
+    ${'' /* } */}
+  ${'' /* } */}
   @media screen and (max-width: 768px) {
     max-height: calc(100vh - 140px);
   }

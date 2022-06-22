@@ -14,6 +14,11 @@ import {
 } from '../components/Styles';
 
 export default function Home() {
+  const config = {
+    type: 'spring',
+    damping: 20,
+    stiffness: 100,
+  };
   return (
     <MainWrapper>
       <Head>
@@ -27,10 +32,12 @@ export default function Home() {
         </StyledQuote>
         <Clock />
         <ClockSmall />
+
         <StyledQuote>
           But is tradeable, <br />
           before it comes.
         </StyledQuote>
+
         <StyledButton onClick={goToApp}>TRADE NOW</StyledButton>
       </SectionWrapper>
       <SectionWrapper2>
