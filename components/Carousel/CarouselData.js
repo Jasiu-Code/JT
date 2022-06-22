@@ -8,7 +8,7 @@ export const CarouselData = [
     title: 'Lawyers',
     description:
       'High specialist may be difficult to reach, book a visit from the aftermarket',
-    image: '/Lawyer.jpeg',
+    image: '/lawyer.jpeg',
   },
   {
     title: 'Doctors',
