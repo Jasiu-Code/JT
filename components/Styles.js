@@ -13,6 +13,7 @@ export const MainWrapper = styled.div`
   -ms-user-select: none; /* Internet Explorer/Edge */
   ${'' /* animation: page-load 0.3s ease-in; */}
   ${'' /* animation-fill-mode: forwards; */}
+  ${'' /* height: calc(100vh - 70px); */}
   height: calc(100vh - 70px);
   margin-top: 70px;
   overflow-y: scroll;
@@ -37,7 +38,7 @@ export const SectionWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: calc(100vh - 70px);
   justify-content: center;
   padding: 20px;
   scroll-snap-align: start;
