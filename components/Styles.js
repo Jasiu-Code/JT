@@ -147,7 +147,7 @@ export const StyledButton = styled.button`
   border-radius: 20px;
 
   margin-top: 100px;
-  border: 5px solid var(--orange);
+  border: 5px solid ${({theme})=> theme.colors.orange};
   background-color: #f35b04;
   background-image: linear-gradient(
     45deg,
@@ -206,7 +206,7 @@ export const TextWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
   height: 100%;
-  color: var(--white);
+  color: ${({theme})=> theme.colors.white};
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -224,7 +224,7 @@ export const StyledList = styled.ul`
 
 export const StyledHeader = styled.h2`
   font-size: clamp(20px, calc(10px + 2vw), 40px);
-  border-bottom: solid 2px var(--orange);
+  border-bottom: solid 2px ${({theme})=> theme.colors.orange};
 `;
 export const StyledTitle = styled.h1`
   font-size: clamp(24px, calc(16px + 4vw), 72px);
@@ -232,7 +232,7 @@ export const StyledTitle = styled.h1`
 `;
 
 export const WhitepaperWrapper = styled.div`
-  background: var(--white);
+  background: ${({theme})=> theme.colors.white};
   max-width: 960px;
   margin: 0 auto;
   height: 100%;
@@ -247,14 +247,14 @@ export const WhitepaperWrapper = styled.div`
   }
 `;
 export const AboutWrapper = styled.div`
-  background: var(--white);
+  background: ${({theme})=> theme.colors.white};
   max-width: 960px;
   margin: 0 auto;
   height: 100%;
   overflow: scroll;
 `;
 export const NotFoundWrapper = styled.div`
-  color: var(--white);
+  color: ${({theme})=> theme.colors.white};
   height: 100%;
   display: flex;
   flex-direction: column;

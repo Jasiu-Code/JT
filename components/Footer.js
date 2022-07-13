@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
-  background: var(--black);
-  color: var(--white);
+  background: ${({theme})=> theme.colors.black};
+  color: ${({theme})=> theme.colors.white};
   text-align: center;
   height: 25px;
   opacity: 0.6;

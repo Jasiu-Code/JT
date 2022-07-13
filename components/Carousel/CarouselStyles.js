@@ -1,21 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  color: var(--white);
+  color: ${({theme}) => theme.colors.orange};
   z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
-  ${'' /* background: rgba(0, 0, 0, 0.8); */}
   border-radius: 1rem;
-  ${'' /* box-shadow: inset 0 0 0.2rem var(--bgl), 0 0 0.2rem var(--bgl); */}
-  ${
-    '' /* h1 {
-    margin: 10px;
-    background: rgba(0, 0, 0, 0.1);
-  } */
-  }
 `;
 
 export const SlidesWrapper = styled.div`
@@ -31,7 +23,7 @@ export const SlidesWrapper = styled.div`
     appearance: none;
     background:transparent;
     border: none;
-    color: var(--white);
+    color: ${({theme}) => theme.colors.white};
     position: absolute;
     font-size: 10rem;
     width: 30%;
@@ -51,13 +43,13 @@ export const SlidesWrapper = styled.div`
     }
     &:last-child {
       right: 0;
-      }
+      }}
 `;
 
 export const SlideWrap = styled.div`
   grid-area: 1/-1;
-  border: solid 2px var(--orange);
-  box-shadow: 0 0 0.6rem var(--orange);
+  border: solid 2px ${({theme}) => theme.colors.orange};
+  box-shadow: 0 0 0.6rem ${({theme}) => theme.colors.orange};
   display: grid;
   align-items: center;
   transition: transform 0.4s ease-in-out;
@@ -75,12 +67,12 @@ export const SlideWrap = styled.div`
       props.active
         ? 'rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg))'
         : ''}
-    }}
+    }
 `;
 
 export const Content = styled.div`
   position: absolute;
-  color: var(--white);
+  color: ${({theme}) => theme.colors.white};
   transform-style: preserve-3d;
   transform: translateZ(2rem);
   transition: opacity 0.3s linear;

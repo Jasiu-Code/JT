@@ -1,18 +1,22 @@
 import Layout from './Layout';
-import '../styles/globals.css';
+// import '../styles/globals.css';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { options } from '../particleJS.config';
 import { AnimatePresence } from 'framer-motion';
-import { Router } from 'next/router';
 import { MotionDiv } from '../components/Styles';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from '../styles/globalStyles';
+import { theme } from '../styles/theme';
+
 
 function MyApp({ Component, pageProps, router }) {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
   return (
-    <>
+    <ThemeProvider theme={theme}>
+    <GlobalStyle/>
       <Layout>
         <Particles id='tsparticles' init={particlesInit} options={options} />
         <AnimatePresence exitBeforeEnter>
@@ -26,7 +30,7 @@ function MyApp({ Component, pageProps, router }) {
           </MotionDiv>
         </AnimatePresence>
       </Layout>
-    </>
+    </ThemeProvider>
   );
 }
 

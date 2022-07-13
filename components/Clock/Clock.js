@@ -6,8 +6,8 @@ const Base = styled.div`
   position: relative;
   height: 240px;
   width: 240px;
-  border: 6px solid var(--white);
-  box-shadow: 2px 2px 10px var(--white);
+  border: 6px solid ${({theme}) => theme.colors.white};
+  box-shadow: 2px 2px 10px ${({theme}) => theme.colors.white};
   border-radius: 50%;
   z-index: 2;
 
@@ -21,8 +21,8 @@ const Base = styled.div`
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 5px solid var(--white);
-    box-shadow: 0px 0px 3px var(--white);
+    border: 5px solid ${({theme}) => theme.colors.white};
+    box-shadow: 0px 0px 3px ${({theme}) => theme.colors.white};
     background: rgba(0, 0, 0, 0);
     z-index: 1;
   }
@@ -36,13 +36,13 @@ const Base = styled.div`
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: var(--white);
+    background: ${({theme}) => theme.colors.white};
     z-index: 2;
   }
 `;
 const Hand = styled.div`
   position: absolute;
-  background: var(--white);
+  background: ${({theme}) => theme.colors.white};
   z-index: 2;
   left: 50%;
 `;
@@ -74,7 +74,7 @@ const Second = styled(Hand)`
   height: 85px;
   width: 7px;
   border-radius: 50% 50% 0% 0%;
-  background: var(--orange);
+  background: ${({theme}) => theme.colors.orange};
 `;
 const Wrapper = styled(motion.div)`
   position: relative;
