@@ -1,5 +1,4 @@
-import Layout from './Layout';
-// import '../styles/globals.css';
+import Layout from '../Components/Layout';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { options } from '../particleJS.config';

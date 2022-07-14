@@ -11,9 +11,6 @@ export const MainWrapper = styled.div`
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  ${'' /* animation: page-load 0.3s ease-in; */}
-  ${'' /* animation-fill-mode: forwards; */}
-  ${'' /* height: calc(100vh - 70px); */}
   height: calc(100vh - 70px);
   margin-top: 70px;
   overflow-y: scroll;
@@ -21,15 +18,6 @@ export const MainWrapper = styled.div`
   scroll-snap-type: y mandatory;
   text-align: center;
   z-index: 5;
-  ${'' /* transform: translateY(-100%); */}
-  ${'' /* @keyframes page-load { */}
-    ${'' /* 0% { */}
-      ${'' /* transform: translateY(-100%); */}
-    ${'' /* } */}
-    ${'' /* 100% { */}
-      ${'' /* transform: translateY(0%); */}
-    ${'' /* } */}
-  ${'' /* } */}
   @media screen and (max-width: 768px) {
     max-height: calc(100vh - 140px);
   }
@@ -39,10 +27,10 @@ export const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 70px);
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-evenly;
   scroll-snap-align: start;
   @media screen and (max-width: 768px) {
+    min-height: calc(100vh - 140px);
     max-height: calc(100vh - 140px);
   }
 `;
@@ -93,11 +81,11 @@ export const StyledQuote = styled.h1`
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  font-size: clamp(32px, calc(8px + 5vw), 72px);
+  font-size: ${({theme}) => theme.fontSize.extraLagre};
   font-weight: 900;
 `;
 export const StyledText = styled.h2`
-  font-size: clamp(16px, calc(6px + 3vw), 48px);
+  font-size: ${({theme}) => theme.fontSize.lagre};
   padding: 10px;
   border-radius: 15px;
   position: relative;
@@ -142,11 +130,10 @@ export const StyledText = styled.h2`
   }
 `;
 export const StyledButton = styled.button`
-  font-size: clamp(22px, calc(8px + 3vw), 52px);
+  font-size: ${({theme})=> theme.fontSize.medium};
   padding: 5px 10px;
   border-radius: 20px;
-
-  margin-top: 100px;
+  /* margin-top: 100px; */
   border: 5px solid ${({theme})=> theme.colors.orange};
   background-color: #f35b04;
   background-image: linear-gradient(
@@ -214,7 +201,7 @@ export const TextWrapper = styled.div`
 export const StyledList = styled.ul`
   height: 100%;
   display: flex;
-  font-size: clamp(16px, calc(6px + 2vw), 22px);
+  font-size: ${({theme}) => theme.fontSize.medium};
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -223,11 +210,11 @@ export const StyledList = styled.ul`
 `;
 
 export const StyledHeader = styled.h2`
-  font-size: clamp(20px, calc(10px + 2vw), 40px);
+  font-size: ${({theme}) => theme.fontSize.large};
   border-bottom: solid 2px ${({theme})=> theme.colors.orange};
 `;
 export const StyledTitle = styled.h1`
-  font-size: clamp(24px, calc(16px + 4vw), 72px);
+  font-size: ${({theme}) => theme.fontSize.extraLarge};
   margin: 20px 0;
 `;
 

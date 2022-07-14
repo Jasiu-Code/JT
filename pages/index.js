@@ -14,11 +14,6 @@ import {
 } from '../components/Styles';
 
 export default function Home() {
-  const config = {
-    type: 'spring',
-    damping: 20,
-    stiffness: 100,
-  };
   return (
     <MainWrapper>
       <Head>
@@ -47,7 +42,7 @@ export default function Home() {
           in a way that is mutually beneficial
           <br /> for customers and vendors.
         </StyledText>
-        <Carousel title='' data={CarouselData} />
+        <Carousel data={CarouselData} />
       </SectionWrapper2>
     </MainWrapper>
   );

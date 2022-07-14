@@ -1,20 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid ${({theme})=> theme.colors.white};
-  color: ${({theme})=> theme.colors.white};
   display: flex;
-  font-size: ${({theme}) => theme.fontSize.medium};
-  height: 70px;
+  align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 70px;
-  padding: 10px;
+  height: 70px;
+  width: 100%;
   position: fixed;
   top: 0px;
-  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: ${({theme})=> theme.colors.white};
+  font-size: ${({theme}) => theme.fontSize.medium};
+  border-bottom: 1px solid ${({theme})=> theme.colors.white};
   z-index: 9;
+
   @media screen and (min-width: 768px) {
     animation: nav-load 0.3s ease-in-out 0.3s;
     animation-fill-mode: forwards;
@@ -29,10 +28,12 @@ export const StyledNav = styled.nav`
     }
   }
 `;
+
 export const NavMain = styled.div`
-  display: block;
+  display:flex;
+  justify-content: center;
   a {
-    padding: 5px 2em;
+    padding: 5px 40px;
   }
   a:not(:last-of-type) {
     border-right: solid 2px ${({theme})=> theme.colors.white};
@@ -42,34 +43,20 @@ export const NavMain = styled.div`
     font-weight: bold;
   }
   @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const NavMobile = styled.nav`
-  background: ${({theme})=> theme.colors.black};
-  border-top: solid 1px ${({theme})=> theme.colors.white};
-  bottom: 0px;
-  display: none;
-  height: 70px;
-  position: fixed;
-  width: 100%;
-  z-index: 9;
-  .active {
-    color: ${({theme})=> theme.colors.orange};
-    font-weight: bold;
-  }
-  @media screen and (max-width: 768px) {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background: ${({theme})=> theme.colors.black};
+    border-top: solid 1px ${({theme})=> theme.colors.white};
+    z-index: 9;
     align-items: center;
-    display: flex;
-    justify-content: center;
+  }
+  @media screen and (max-width: 1024px){
     a {
       padding: 2px 10px;
     }
-    a:not(:last-of-type) {
-      border-right: solid 1px ${({theme})=> theme.colors.white};
-    }
-  } ;
+  }
 `;
 export const StyledBtn = styled.button`
   background: ${({theme})=> theme.colors.black};
@@ -90,7 +77,7 @@ export const StyledBtn = styled.button`
 `;
 export const StyledLogo = styled.div`
   display: flex;
-  height: clamp(150px, calc(120px + 10vw), 220px);
-  min-width: 200px;
+  height: clamp(120px, calc(120px + 10vw), 220px);
+  min-width: 180px;
   position: relative;
 `;

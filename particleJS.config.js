@@ -12,7 +12,7 @@ export const options = {
       },
     },
     color: {
-      value: '#5c5b59',
+      value: '#ffffff',
     },
     shape: {
       type: 'char',
@@ -33,7 +33,7 @@ export const options = {
       random: true,
       anim: {
         enable: true,
-        speed: 0.7,
+        speed: 0.3,
         opacity_min: 0.1,
         sync: false,
       },
@@ -77,7 +77,7 @@ export const options = {
         },
       },
       onclick: {
-        enable: true,
+        enable: false,
         mode: 'repulse',
       },
       resize: true,

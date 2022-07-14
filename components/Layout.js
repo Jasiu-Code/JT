@@ -1,5 +1,5 @@
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer';
+import Navbar from './Navbar/Navbar';
+import Footer from './Footer';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

@@ -6,7 +6,12 @@ export const theme = {
     },
     fontSize: {
         small: 'clamp(12px, calc(5px + 1vw), 20px)',
-        medium: 'clamp(16px, calc(10px + 1vw), 24px)'
-        
+        medium: 'clamp(16px, calc(6px + 1vw), 24px)',
+        large: 'clamp(24px, calc(6px + 2vw), 42px)',
+        extraLarge: 'clamp(18px, calc(2px + 3vw), 62px);',
+        sm: '12px',
+        md: '16px',
+        l: '20px',
+        xl: '24px'
     }
 }

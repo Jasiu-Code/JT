@@ -91,7 +91,7 @@ const Slide = ({ slide, offset }) => {
   );
 };
 
-const Carousel = ({ title, data }) => {
+const Carousel = ({ data }) => {
   const [state, dispatch] = useReducer(slidesReducer, initialState);
   console.log({ data });
   return (
@@ -105,7 +105,6 @@ const Carousel = ({ title, data }) => {
         }
       }}
     >
-      <h1>{title}</h1>
       <SlidesWrapper>
         <button
           onClick={() => {

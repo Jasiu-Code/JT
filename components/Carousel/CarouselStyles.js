@@ -1,22 +1,19 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  color: ${({theme}) => theme.colors.orange};
-  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
-  border-radius: 1rem;
+  color: ${({theme}) => theme.colors.orange};
+  z-index: 5;
 `;
 
 export const SlidesWrapper = styled.div`
-  position: relative;
-  padding: 1rem;
   display: grid;
-  overflow:hidden;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow:hidden;
   width:90vw;
   max-width:900px;
   button{
@@ -83,18 +80,18 @@ export const Content = styled.div`
   }
 `;
 export const StyledTitle = styled.div`
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: normal;
   letter-spacing: 0.2ch;
   text-transform: uppercase;
-  margin: 1rem;
+  margin: 10px;
   display: flex;
   font-weight: bold;
 `;
 
 export const StyledDescription = styled.div`
-  margin: 1rem;
-  font-size: 0.9rem;
+  margin: 10px;
+  font-size: 12px;
   letter-spacing: 0.2ch;
   display: flex;
   font-weight: bold;

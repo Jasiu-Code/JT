@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Logo from './Logo';
 import NavbarLinks from './NavbarLinks';
-import { StyledNav, NavMain, NavMobile, StyledBtn } from './NavbarStyles';
+import { StyledNav, NavMain, StyledBtn } from './NavbarStyles';
 import { goToApp } from '../Styles';
 
 const Navbar = () => {
@@ -15,9 +15,6 @@ const Navbar = () => {
       <NavMain>
         <NavbarLinks />
       </NavMain>
-      <NavMobile>
-        <NavbarLinks />
-      </NavMobile>
       <StyledBtn onClick={goToApp}>Go to App</StyledBtn>
     </StyledNav>
   );
