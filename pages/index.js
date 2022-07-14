@@ -37,7 +37,7 @@ export default function Home() {
       </SectionWrapper>
       <SectionWrapper2>
         <StyledText>
-          At JTT we believe that there is a way to balance
+          At JT we believe that there is a way to balance
           <br /> demand and supply of time-based services <br />
           in a way that is mutually beneficial
           <br /> for customers and vendors.
