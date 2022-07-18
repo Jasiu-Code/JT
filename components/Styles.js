@@ -12,21 +12,23 @@ export const MainWrapper = styled.div`
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   flex:1;
-  height: calc(100vh - 70px);
+  align-self: flex-start;
+  /* background:red; */
+  height: calc(100vh - 95px);
       /* height: -webkit-fill-available; */
-  margin-top: 70px;
+  /* margin-top: 70px; */
   overflow-y: scroll;
   width: 100%;
   scroll-snap-type: y mandatory;
   text-align: center;
   z-index: 5;
   @media screen and (max-width: 768px) {
-    max-height: calc(100vh - 140px);
-    margin-bottom: 70px;
+    /* max-height: calc(100vh - 140px); */
   }
 `;
 export const SectionWrapper = styled.div`
   align-items: center;
+  border: 3px solid blue;
   display: flex;
   flex-direction: column;
   /* min-height: calc(100vh - 70px); */
