@@ -12,6 +12,7 @@ export const MainWrapper = styled.div`
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   height: calc(100vh - 70px);
+  height: -webkit-fill-available;
   margin-top: 70px;
   overflow-y: scroll;
   width: 100%;
@@ -20,6 +21,7 @@ export const MainWrapper = styled.div`
   z-index: 5;
   @media screen and (max-width: 768px) {
     max-height: calc(100vh - 140px);
+    height: -webkit-fill-available;
   }
 `;
 export const SectionWrapper = styled.div`
