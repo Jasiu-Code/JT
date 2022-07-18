@@ -35,7 +35,7 @@ export default function Home() {
 
         <StyledButton onClick={goToApp}>TRADE NOW</StyledButton>
       </SectionWrapper>
-      <SectionWrapper2>
+      <SectionWrapper>
         <StyledText>
           At JT we believe that there is a way to balance
           <br /> demand and supply of time-based services <br />
@@ -43,7 +43,7 @@ export default function Home() {
           <br /> for customers and vendors.
         </StyledText>
         <Carousel data={CarouselData} />
-      </SectionWrapper2>
+      </SectionWrapper>
     </MainWrapper>
   );
 }

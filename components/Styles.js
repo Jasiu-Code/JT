@@ -11,8 +11,9 @@ export const MainWrapper = styled.div`
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+  flex:1;
   height: calc(100vh - 70px);
-  height: -webkit-fill-available;
+      /* height: -webkit-fill-available; */
   margin-top: 70px;
   overflow-y: scroll;
   width: 100%;
@@ -21,24 +22,21 @@ export const MainWrapper = styled.div`
   z-index: 5;
   @media screen and (max-width: 768px) {
     max-height: calc(100vh - 140px);
-    height: -webkit-fill-available;
   }
 `;
 export const SectionWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 70px);
+  /* min-height: calc(100vh - 70px); */
   justify-content: space-evenly;
   scroll-snap-align: start;
-  height: -webkit-fill-available;
+  height:100%;
   @media screen and (max-width: 768px) {
     height: -webkit-fill-available;
-    min-height: calc(100vh - 140px);
+    /* min-height: calc(100vh - 140px); */
+    /* max-height: calc(100vh - 140px); */
   }
-`;
-export const SectionWrapper2 = styled(SectionWrapper)`
-  justify-content: space-evenly;
 `;
 export const StyledQuote = styled.h1`
   background-color: #f35b04;
@@ -87,7 +85,7 @@ export const StyledQuote = styled.h1`
   font-size: ${({theme}) => theme.fontSize.extraLagre};
   font-weight: 900;
 `;
-export const StyledText = styled.h2`
+export const StyledText = styled.h3`
   font-size: ${({theme}) => theme.fontSize.lagre};
   padding: 10px;
   border-radius: 15px;
