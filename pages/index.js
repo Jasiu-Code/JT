@@ -6,7 +6,6 @@ import ClockSmall from '../components/Clock/ClockSmall';
 import {
   MainWrapper,
   SectionWrapper,
-  SectionWrapper2,
   StyledQuote,
   StyledText,
   StyledButton,

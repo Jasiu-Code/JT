@@ -22,6 +22,7 @@ export const MainWrapper = styled.div`
   z-index: 5;
   @media screen and (max-width: 768px) {
     max-height: calc(100vh - 140px);
+    margin-bottom: 70px;
   }
 `;
 export const SectionWrapper = styled.div`
@@ -33,7 +34,7 @@ export const SectionWrapper = styled.div`
   scroll-snap-align: start;
   height:100%;
   @media screen and (max-width: 768px) {
-    height: -webkit-fill-available;
+    /* height: -webkit-fill-available; */
     /* min-height: calc(100vh - 140px); */
     /* max-height: calc(100vh - 140px); */
   }
@@ -85,7 +86,7 @@ export const StyledQuote = styled.h1`
   font-size: ${({theme}) => theme.fontSize.extraLagre};
   font-weight: 900;
 `;
-export const StyledText = styled.h3`
+export const StyledText = styled.h2`
   font-size: ${({theme}) => theme.fontSize.lagre};
   padding: 10px;
   border-radius: 15px;
@@ -128,6 +129,9 @@ export const StyledText = styled.h3`
     100% {
       background-size: 650%;
     }
+  }
+  @media screen and (max-width: 768px) {
+    font-size:20px;
   }
 `;
 export const StyledButton = styled.button`
