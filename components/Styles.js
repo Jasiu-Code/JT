@@ -33,9 +33,8 @@ export const SectionWrapper = styled.div`
   scroll-snap-align: start;
   height: -webkit-fill-available;
   @media screen and (max-width: 768px) {
-    min-height: calc(100vh - 140px);
-    max-height: calc(100vh - 140px);
     height: -webkit-fill-available;
+    max-height: calc(100vh - 140px);
   }
 `;
 export const SectionWrapper2 = styled(SectionWrapper)`
