@@ -34,7 +34,7 @@ export const SectionWrapper = styled.div`
   height: -webkit-fill-available;
   @media screen and (max-width: 768px) {
     height: -webkit-fill-available;
-    max-height: calc(100vh - 240px);
+    min-height: calc(100vh - 140px);
   }
 `;
 export const SectionWrapper2 = styled(SectionWrapper)`
