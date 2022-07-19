@@ -14,8 +14,8 @@ export const MainWrapper = styled.div`
   flex: 1;
   align-self: flex-start;
   ${'' /* height: calc(100vh - 95px); */}
+  height: 100%;
   height: -webkit-fill-available;
-  height: var(--app-height);
   margin-top: 70px;
   margin-bottom: 25px;
   overflow-y: scroll;
