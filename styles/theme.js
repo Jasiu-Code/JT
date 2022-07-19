@@ -7,8 +7,8 @@ export const theme = {
   fontSize: {
     small: 'clamp(12px, calc(5px + 1vw), 20px)',
     medium: 'clamp(16px, calc(6px + 1vw), 24px)',
-    large: 'clamp(24px, calc(6px + 3vw), 52px)',
-    extraLarge: 'clamp(18px, calc(2px + 7vw), 82px);',
+    large: 'clamp(24px, calc(6px + 2vw), 52px)',
+    extraLarge: 'clamp(18px, calc(2px + 5vw), 82px);',
     sm: '12px',
     md: '16px',
     l: '20px',

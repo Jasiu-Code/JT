@@ -13,7 +13,7 @@ export const MainWrapper = styled.div`
   -ms-user-select: none; /* Internet Explorer/Edge */
   flex: 1;
   align-self: flex-start;
-  height: 100%;
+  height: 100vh;
   margin-top: 70px;
   margin-bottom: 25px;
   overflow-y: scroll;
@@ -79,7 +79,6 @@ export const StyledQuote = styled.h1`
   text-align: center;
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.fontSize.extraLarge};
-
   font-weight: 900;
 `;
 export const StyledText = styled.h2`
