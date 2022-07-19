@@ -16,7 +16,7 @@ export const MainWrapper = styled.div`
   /* background:red; */
   height: calc(100vh - 95px);
   /* height: -webkit-fill-available; */
-  /* margin-top: 70px; */
+  margin-top: 70px;
   margin-bottom: 25px;
   overflow-y: scroll;
   width: 100%;
