@@ -93,7 +93,6 @@ const Slide = ({ slide, offset }) => {
 
 const Carousel = ({ data }) => {
   const [state, dispatch] = useReducer(slidesReducer, initialState);
-  console.log({ data });
   return (
     <Wrapper
       onKeyDown={(event) => {

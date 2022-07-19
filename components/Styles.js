@@ -11,19 +11,21 @@ export const MainWrapper = styled.div`
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  flex:1;
+  flex: 1;
   align-self: flex-start;
   /* background:red; */
   height: calc(100vh - 95px);
-      /* height: -webkit-fill-available; */
+  /* height: -webkit-fill-available; */
   /* margin-top: 70px; */
+  margin-bottom: 25px;
   overflow-y: scroll;
   width: 100%;
   scroll-snap-type: y mandatory;
   text-align: center;
   z-index: 5;
   @media screen and (max-width: 768px) {
-    /* max-height: calc(100vh - 140px); */
+    height: calc(100vh - 165px);
+    margin-bottom: 95px;
   }
 `;
 export const SectionWrapper = styled.div`
@@ -34,7 +36,7 @@ export const SectionWrapper = styled.div`
   /* min-height: calc(100vh - 70px); */
   justify-content: space-evenly;
   scroll-snap-align: start;
-  height:100%;
+  height: 100%;
   @media screen and (max-width: 768px) {
     /* height: -webkit-fill-available; */
     /* min-height: calc(100vh - 140px); */
@@ -85,11 +87,12 @@ export const StyledQuote = styled.h1`
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  font-size: ${({theme}) => theme.fontSize.extraLagre};
+  font-size: ${({ theme }) => theme.fontSize.extraLarge};
+
   font-weight: 900;
 `;
 export const StyledText = styled.h2`
-  font-size: ${({theme}) => theme.fontSize.lagre};
+  font-size: ${({ theme }) => theme.fontSize.lagre};
   padding: 10px;
   border-radius: 15px;
   position: relative;
@@ -133,15 +136,15 @@ export const StyledText = styled.h2`
     }
   }
   @media screen and (max-width: 768px) {
-    font-size:20px;
+    font-size: 20px;
   }
 `;
 export const StyledButton = styled.button`
-  font-size: ${({theme})=> theme.fontSize.medium};
+  font-size: ${({ theme }) => theme.fontSize.medium};
   padding: 5px 10px;
   border-radius: 20px;
   /* margin-top: 100px; */
-  border: 5px solid ${({theme})=> theme.colors.orange};
+  border: 5px solid ${({ theme }) => theme.colors.orange};
   background-color: #f35b04;
   background-image: linear-gradient(
     45deg,
@@ -200,7 +203,7 @@ export const TextWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
   height: 100%;
-  color: ${({theme})=> theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -208,7 +211,7 @@ export const TextWrapper = styled.div`
 export const StyledList = styled.ul`
   height: 100%;
   display: flex;
-  font-size: ${({theme}) => theme.fontSize.medium};
+  font-size: ${({ theme }) => theme.fontSize.medium};
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -217,16 +220,16 @@ export const StyledList = styled.ul`
 `;
 
 export const StyledHeader = styled.h2`
-  font-size: ${({theme}) => theme.fontSize.large};
-  border-bottom: solid 2px ${({theme})=> theme.colors.orange};
+  font-size: ${({ theme }) => theme.fontSize.large};
+  border-bottom: solid 2px ${({ theme }) => theme.colors.orange};
 `;
 export const StyledTitle = styled.h1`
-  font-size: ${({theme}) => theme.fontSize.extraLarge};
+  font-size: ${({ theme }) => theme.fontSize.extraLarge};
   margin: 20px 0;
 `;
 
 export const WhitepaperWrapper = styled.div`
-  background: ${({theme})=> theme.colors.white};
+  background: ${({ theme }) => theme.colors.white};
   max-width: 960px;
   margin: 0 auto;
   height: 100%;
@@ -241,14 +244,14 @@ export const WhitepaperWrapper = styled.div`
   }
 `;
 export const AboutWrapper = styled.div`
-  background: ${({theme})=> theme.colors.white};
+  background: ${({ theme }) => theme.colors.white};
   max-width: 960px;
   margin: 0 auto;
   height: 100%;
   overflow: scroll;
 `;
 export const NotFoundWrapper = styled.div`
-  color: ${({theme})=> theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   height: 100%;
   display: flex;
   flex-direction: column;
