@@ -13,7 +13,7 @@ export const MainWrapper = styled.div`
   -ms-user-select: none; /* Internet Explorer/Edge */
   flex: 1;
   align-self: flex-start;
-  height: 100vh;
+  height: calc(100vh - 95px);
   margin-top: 70px;
   margin-bottom: 25px;
   overflow-y: scroll;
@@ -27,6 +27,7 @@ export const MainWrapper = styled.div`
   }
 `;
 export const SectionWrapper = styled.div`
+  border: 2px solid blue;
   align-items: center;
   display: flex;
   flex-direction: column;
