@@ -27,7 +27,6 @@ export const MainWrapper = styled.div`
   }
 `;
 export const SectionWrapper = styled.div`
-  border: 2px solid blue;
   align-items: center;
   display: flex;
   flex-direction: column;
