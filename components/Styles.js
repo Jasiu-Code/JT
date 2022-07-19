@@ -30,7 +30,7 @@ export const MainWrapper = styled.div`
 `;
 export const SectionWrapper = styled.div`
   align-items: center;
-  border: 3px solid red;
+  border: 3px solid green;
   display: flex;
   flex-direction: column;
   /* min-height: calc(100vh - 70px); */
