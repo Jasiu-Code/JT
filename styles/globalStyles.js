@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 html{
     box-sizing:border-box;
     height:-webkit-fill-available;
+    width:-webkit-fill-available;
 }
 *,*::after,*::before{
     box-sizing: border-box;

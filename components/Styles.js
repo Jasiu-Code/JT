@@ -13,9 +13,9 @@ export const MainWrapper = styled.div`
   -ms-user-select: none; /* Internet Explorer/Edge */
   flex: 1;
   align-self: flex-start;
-  /* background:red; */
-  height: calc(100vh - 95px);
-  /* height: -webkit-fill-available; */
+  ${'' /* height: calc(100vh - 95px); */}
+  height: 100vh;
+  height: -webkit-fill-available;
   margin-top: 70px;
   margin-bottom: 25px;
   overflow-y: scroll;
@@ -30,7 +30,7 @@ export const MainWrapper = styled.div`
 `;
 export const SectionWrapper = styled.div`
   align-items: center;
-  border: 3px solid blue;
+  border: 3px solid red;
   display: flex;
   flex-direction: column;
   /* min-height: calc(100vh - 70px); */

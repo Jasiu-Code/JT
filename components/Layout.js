@@ -7,8 +7,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: -webkit-fill-available;
+  width: -webkit-fill-available;
   height: 100vh;
-  background: red;
 `;
 
 const Layout = ({ children }) => {
