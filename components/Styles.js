@@ -13,9 +13,7 @@ export const MainWrapper = styled.div`
   -ms-user-select: none; /* Internet Explorer/Edge */
   flex: 1;
   align-self: flex-start;
-  ${'' /* height: calc(100vh - 95px); */}
   height: 100%;
-  height: -webkit-fill-available;
   margin-top: 70px;
   margin-bottom: 25px;
   overflow-y: scroll;
@@ -24,24 +22,17 @@ export const MainWrapper = styled.div`
   text-align: center;
   z-index: 5;
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 165px);
-    margin-bottom: 95px;
+    height: calc(100vh - 185px);
+    margin-bottom: 115px;
   }
 `;
 export const SectionWrapper = styled.div`
   align-items: center;
-  border: 3px solid blue;
   display: flex;
   flex-direction: column;
-  /* min-height: calc(100vh - 70px); */
   justify-content: space-evenly;
   scroll-snap-align: start;
   height: 100%;
-  @media screen and (max-width: 768px) {
-    /* height: -webkit-fill-available; */
-    /* min-height: calc(100vh - 140px); */
-    /* max-height: calc(100vh - 140px); */
-  }
 `;
 export const StyledQuote = styled.h1`
   background-color: #f35b04;
@@ -92,7 +83,7 @@ export const StyledQuote = styled.h1`
   font-weight: 900;
 `;
 export const StyledText = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize.lagre};
+  font-size: ${({ theme }) => theme.fontSize.large};
   padding: 10px;
   border-radius: 15px;
   position: relative;
@@ -136,11 +127,11 @@ export const StyledText = styled.h2`
     }
   }
   @media screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 export const StyledButton = styled.button`
-  font-size: ${({ theme }) => theme.fontSize.medium};
+  font-size: ${({ theme }) => theme.fontSize.large};
   padding: 5px 10px;
   border-radius: 20px;
   /* margin-top: 100px; */
