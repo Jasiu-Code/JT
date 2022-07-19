@@ -32,7 +32,8 @@ export const SectionWrapper = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   scroll-snap-align: start;
-  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
 `;
 export const StyledQuote = styled.h1`
   background-color: #f35b04;
