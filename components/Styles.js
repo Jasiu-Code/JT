@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const MotionDiv = styled(motion.div)`
   z-index: 3;
@@ -178,14 +178,14 @@ export const StyledButton = styled.button`
 
 export const Done = styled.li`
   ::before {
-    content: '✅';
+    content: "✅";
     display: inline-block;
     self-align: center;
   }
 `;
 export const OnGoing = styled.li`
   ::before {
-    content: '🔄';
+    content: "🔄";
     display: inline-block;
     margin-left: 1rem;
   }
@@ -250,5 +250,5 @@ export const NotFoundWrapper = styled.div`
   justify-content: center;
 `;
 export const goToApp = () => {
-  window.open('https://www.google.com');
+  window.open("https://jt-marketplace.vercel.app/");
 };
