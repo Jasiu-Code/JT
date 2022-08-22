@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 import {
   MainWrapper,
@@ -8,7 +8,7 @@ import {
   StyledHeader,
   Done,
   OnGoing,
-} from '../components/Styles';
+} from "../components/Styles";
 
 const Roadmap = () => {
   return (
@@ -26,19 +26,11 @@ const Roadmap = () => {
             <Done>Build test smart contract</Done>
             <Done>Build MVP </Done>
             <OnGoing>Testnet V1.0 Launch</OnGoing>
-            <OnGoing>Public round</OnGoing>
             <OnGoing>Testnet V2.0 Launch</OnGoing>
           </StyledList>
           <StyledHeader>2023</StyledHeader>
           <StyledList>
-            <OnGoing>Start social medias </OnGoing>
-            <OnGoing>Whitepaper Release</OnGoing>
-            <OnGoing>Offical testnet launch</OnGoing>
-            <OnGoing>Promotion & Marketing</OnGoing>
-            <OnGoing>Public offering</OnGoing>
-            <OnGoing>DEX listing</OnGoing>
-            <OnGoing>Smart contract audit</OnGoing>
-            <OnGoing>Mobile App</OnGoing>
+            <OnGoing>Coming soon</OnGoing>
           </StyledList>
         </TextWrapper>
       </MainWrapper>
