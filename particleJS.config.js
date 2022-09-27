@@ -17,19 +17,19 @@ export const options = {
     shape: {
       type: 'char',
       character: {
-        value: ['JT'],
+        value: ['Just Time'],
         font: 'Verdana',
         style: '',
         weight: '600',
-        fill: true,
+        fill: false,
       },
     },
     stroke: {
-      width: 1,
+      width: 0.7,
       color: '#ffffff',
     },
     opacity: {
-      value: 0.6,
+      value: 0.4,
       random: true,
       anim: {
         enable: true,
@@ -86,7 +86,7 @@ export const options = {
       grab: {
         distance: 400,
         line_linked: {
-          opacity: 1,
+          opacity: 0.3,
         },
       },
       repulse: {

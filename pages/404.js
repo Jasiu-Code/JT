@@ -17,7 +17,7 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>Wrong neighborhood</title>
+        <title>Wrong addres</title>
       </Head>
       <MainWrapper className='not-found'>
         <NotFoundWrapper>
